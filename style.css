@@ -1,0 +1,228 @@
+/* --- Google Fonts --- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Lato:wght@400;700&display=swap');
+
+/* --- Basic Styles & Karinderia Theme --- */
+:root {
+    --primary-color: #D35400; /* A warm, inviting orange */
+    --secondary-color: #2C3E50; /* A dark, professional blue/grey */
+    --background-color: #FDF5E6; /* A soft, cream background like old paper */
+    --text-color: #333333;
+    --card-bg: #FFFFFF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+h1, h2, h3 {
+    font-family: 'Poppins', sans-serif;
+    color: var(--primary-color);
+    line-height: 1.2;
+}
+
+h1 { font-size: 2.8rem; }
+h2 { font-size: 2rem; margin-bottom: 20px; }
+h3 { font-size: 1.5rem; color: var(--secondary-color); }
+
+section {
+    padding: 60px 0;
+    border-bottom: 1px dashed #ddd;
+}
+
+/* --- Header & Navigation --- */
+.header {
+    background-color: var(--card-bg);
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.nav-menu a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    margin-left: 25px;
+    font-weight: 700;
+    transition: color 0.3s;
+}
+
+.nav-menu a:hover {
+    color: var(--primary-color);
+}
+
+/* --- Hero/Welcome Section --- */
+.hero {
+    text-align: center;
+    padding: 80px 0;
+}
+.hero .tagline {
+    font-size: 1.2rem;
+    color: var(--secondary-color);
+    margin-top: 10px;
+}
+.hero .intro {
+    max-width: 700px;
+    margin: 20px auto 0;
+    font-size: 1.1rem;
+}
+
+/* --- Menu, Services, Location Sections --- */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background-color: var(--card-bg);
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    text-align: center;
+}
+
+#menu .menu-items {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    columns: 2;
+    -webkit-columns: 2;
+    -moz-columns: 2;
+    gap: 20px;
+}
+
+#menu .menu-items li {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+.menu-note {
+    margin-top: 30px;
+    font-style: italic;
+    background-color: #FFF9C4;
+    padding: 15px;
+    border-radius: 5px;
+    border-left: 5px solid var(--primary-color);
+    text-align: center;
+}
+
+#services .card i {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: var(--primary-color);
+}
+#services .card h3 {
+     margin-bottom: 10px;
+}
+
+/* --- Location Section --- */
+#location .location-content {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 40px;
+    align-items: center;
+}
+#location .address-info p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+.map-embed {
+    width: 100%;
+    height: 400px;
+    border: 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+.cta-button {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+.cta-button:hover {
+    background-color: #E67E22; /* A slightly lighter orange on hover */
+}
+
+/* --- Footer --- */
+.footer {
+    background-color: var(--secondary-color);
+    color: #ecf0f1;
+    text-align: center;
+    padding: 40px 0;
+}
+.footer p {
+    margin-bottom: 10px;
+}
+.footer a {
+    color: #ffffff;
+    font-weight: 700;
+    text-decoration: none;
+}
+.footer .tin {
+    font-size: 0.9rem;
+    opacity: 0.7;
+    margin-top: 20px;
+}
+
+/* --- Mobile Responsiveness --- */
+@media (max-width: 768px) {
+    h1 { font-size: 2.2rem; }
+    h2 { font-size: 1.8rem; }
+    
+    .navbar {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .nav-menu {
+        margin-top: 10px;
+    }
+    .nav-menu a {
+        margin: 0 10px;
+    }
+
+    #menu .menu-items {
+        columns: 1;
+        -webkit-columns: 1;
+        -moz-columns: 1;
+    }
+
+    #location .location-content {
+        grid-template-columns: 1fr;
+    }
+}
